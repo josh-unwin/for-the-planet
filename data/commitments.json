@@ -1,0 +1,17 @@
+{
+  "title": "commitments",
+  "commitments": [
+    {
+      "user": "Peter",
+      "commitment": "Cycle to work"
+    },
+    {
+      "user": "Lea",
+      "commitment": "Eat less meat!"
+    },
+    {
+      "user": "Sarah",
+      "commitment": "Join more protests"
+    }
+  ]
+}

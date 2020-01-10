@@ -4,17 +4,31 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import { Form, Field } from 'react-final-form'
+// import JSONbuildtime from "./json-at-buildtime"
+import JSONData from "../../data/commitments.json"
+
+const onSubmit = async values => {
+  console.log('form submitted');
+  console.log(values);
+}
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Form
+      onSubmit={onSubmit}
+      render={({ handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
+          <h2>for the planet I will...</h2>
+          <div>
+            <Field name="commitment" component="input" placeholder="go vegan!" />
+            <Field name="name" component="input" placeholder="John S" />
+            <button type="submit">Share your commitment</button>
+          </div>
+        </form>
+      )}
+    />
   </Layout>
 )
 
