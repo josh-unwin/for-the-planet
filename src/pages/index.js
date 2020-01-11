@@ -7,10 +7,13 @@ import SEO from "../components/seo"
 import { Form, Field } from 'react-final-form'
 // import JSONbuildtime from "./json-at-buildtime"
 import JSONData from "../../data/commitments.json"
+import CommitmentList from '../components/commitment_list'
 
 const onSubmit = async values => {
   console.log('form submitted');
   console.log(values);
+  console.log(JSONData.commitments);
+  JSONData.commitments.push({"user": values.name, "commitment": values.commitment})
 }
 
 const IndexPage = () => (
@@ -29,6 +32,7 @@ const IndexPage = () => (
         </form>
       )}
     />
+    <CommitmentList />
   </Layout>
 )
 
