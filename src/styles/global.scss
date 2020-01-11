@@ -1,0 +1,71 @@
+// Variables:
+
+/* RGB */
+$background-blue: rgba(44, 59, 79, 1);
+$color2: rgba(0, 165, 207, 1);
+$color3: rgba(159, 255, 203, 1);
+$color4: rgba(37, 161, 142, 1);
+$ftp-green: rgba(122, 229, 130, 1);
+
+
+// Global CSS
+
+body {
+  background-color: $background-blue;
+}
+
+// Commitment form CSS
+
+.commitment-form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.commitment-form-group {
+  height: 45px;
+  margin: 10px 0;
+}
+
+.commitment-form-comp {
+  padding: 0px 10px;
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  width: 600px
+}
+
+.commitment-form-button {
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  margin-left: 8px;
+  background-color: $ftp-green;
+}
+
+// Earth Graphic CSS
+.earth-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 130px;
+}
+
+.earth-img {
+  width: 60%
+}
+
+.cloud_1, .cloud_2 {
+  position: absolute;
+  width: 10%
+}
+
+.cloud_1 {
+  top: 16px;
+  left: 500px;
+}
+
+.cloud_2 {
+  top: 400px;
+  left: 1200px;
+}

@@ -10,20 +10,23 @@ const onSubmit = async values => {
 }
 
 const CommitmentForm = () => (
-  <Form
-    onSubmit={onSubmit}
-    render={({ handleSubmit }) => (
-      <form onSubmit={handleSubmit}>
-        <h2>for the planet I will...</h2>
-        <h3> Testing</h3>
-        <div>
-          <Field name="commitment" component="input" placeholder="go vegan!" />
-          <Field name="name" component="input" placeholder="John S" />
-          <button type="submit">Share your commitment</button>
-        </div>
-      </form>
-    )}
-  />
+  <div className="new-commitment">
+    <Form
+      onSubmit={onSubmit}
+      render={({ handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
+          <div className="commitment-form-container">
+            <h1>for the planet I will...</h1>
+            <div className="commitment-form-group">
+              <Field className="commitment-form-comp" name="commitment" component="input" placeholder="go vegan!" />
+              {/*<Field name="name" component="input" placeholder="John S" />*/}
+              <button className="commitment-form-button" type="submit">Share your commitment</button>
+            </div>
+          </div>
+        </form>
+      )}
+    />
+  </div>
 )
 
 export default CommitmentForm
