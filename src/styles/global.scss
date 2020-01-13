@@ -1,3 +1,6 @@
+// Custom Fonts
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100&display=swap');
+
 // Variables:
 
 /* RGB */
@@ -14,41 +17,67 @@ body {
   background-color: $background-blue;
 }
 
-// Commitment form CSS
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+// Functional CSS
+.hidden {
+  display: none
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column
+}
+
+// Commitment form CSS
 .commitment-form-container {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 10px
 }
 
 .commitment-form-group {
-  height: 45px;
+  height: fit-content;
   margin: 10px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .commitment-form-comp {
-  padding: 0px 10px;
-  height: 100%;
+  padding: 10px 10px;
   border-radius: 5px;
   border: none;
-  width: 600px
+  width: 600px;
+  margin: 10px
 }
 
 .commitment-form-button {
-  height: 100%;
+  height: 47px;
   border-radius: 5px;
   border: none;
   margin-left: 8px;
   background-color: $ftp-green;
 }
 
+
+// Trending/Stats
+.total-commitments-stat {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 60px;
+}
+
+
 // Earth Graphic CSS
 .earth-container {
   position: relative;
   display: flex;
   justify-content: center;
-  margin-top: 130px;
+  margin-top: 80px;
 }
 
 .earth-img {
