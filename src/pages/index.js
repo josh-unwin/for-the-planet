@@ -14,12 +14,6 @@ const IndexPage = ({data}) => (
     <div className="container">
       <SEO title="Home" />
       <CommitmentForm />
-      <div className="graphql_test">
-        <p>{data.allCommitments.edges[1].node.commitment}</p>
-        {data.allCommitments.edges.forEach(commitmentUni =>
-          <p>{commitmentUni.node.commitment}</p>
-          )}
-      </div>
       <TrendingStats />
       <Earth />
       <CommitmentList />
@@ -27,18 +21,6 @@ const IndexPage = ({data}) => (
   </Layout>
 )
 
-export const query = graphql`
-  query TestQuery {
-    allCommitments {
-      edges {
-        node {
-          commitment
-          name
-          country
-        }
-      }
-    }
-  }
-`
+
 
 export default IndexPage
