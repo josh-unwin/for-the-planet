@@ -35,23 +35,23 @@ module.exports = {
       },
     },
     // Firebase config
-    {
-      resolve: 'gatsby-source-firestore',
-      options: {
-        credential: require("./for-the-planet-firebase-adminsdk-egjn1-cef8f5b638.json"),
-        types: [
-          {
-            type: 'Commitments',
-            collection: 'commitments',
-            map: doc => ({
-              commitment: doc.commitment,
-              name: doc.name,
-              country: doc.country,
-            }),
-          }
-        ],
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-firestore',
+    //   options: {
+    //     credential: require("./for-the-planet-firebase-adminsdk-egjn1-cef8f5b638.json"),
+    //     types: [
+    //       {
+    //         type: 'Commitments',
+    //         collection: 'commitments',
+    //         map: doc => ({
+    //           commitment: doc.commitment,
+    //           name: doc.name,
+    //           country: doc.country,
+    //         }),
+    //       }
+    //     ],
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
